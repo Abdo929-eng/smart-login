@@ -24,7 +24,7 @@ function signUp() {
   }
 
 
-  if (isValidEmail(signupEmailInput.value) &&isNewEmail(signupEmailInput.value)&&isValidpassword(signupPasswordInput.value)) {
+  if (isValidEmail(signupEmailInput.value) &&isNewEmail(signupEmailInput.value)) {
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
     clearForm();
@@ -41,12 +41,7 @@ function isValidEmail(email) {
   let Regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return Regex.test(email);
 }
-function isValidpassword(password) {
 
-  let Regx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-  
-  return Regx.test(password);
-}
 
 function isNewEmail(email) {
   for (let i = 0; i < users.length; i++) {

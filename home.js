@@ -5,5 +5,5 @@ let userName = localStorage.getItem("userName");
 welcomeUser.innerHTML = "Welcome " + userName;
 
 logOutBtn.addEventListener("click", function () {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
